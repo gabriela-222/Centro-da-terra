@@ -1,0 +1,35 @@
+<div class="game-container">
+    <!-- TELA INICIAL -->
+    <div id="start-screen" class="screen active">
+        <h1>🌍 Missão: Centro da Terra</h1>
+        <p>Ajude o explorador a descer da superfície até o núcleo da Terra, passando pelas camadas do planeta e respondendo a desafios científicos!</p>
+        <button onclick="startGame()">Iniciar Missão</button>
+    </div>
+
+    <!-- TELA DO JOGO -->
+    <div id="game-screen" class="screen">
+        <header id="game-header">
+            <span id="phase-title">Fase 1: Crosta Terrestre</span>
+            <span id="score-board">Cristais: <span id="crystal-count">0</span>/3</span>
+        </header>
+
+        <div id="game-arena" class="crosta">
+            <div id="player">🧑‍🚀</div>
+            <div id="objective-item" class="item" onclick="collectItem()" title="Toque para coletar!">💎</div>
+            <div id="message-box">Toque nas setas ou use os botões e **toque no cristal** para coletá-lo!</div>
+        </div>
+
+        <!-- PAINEL DE QUIZ -->
+        <div id="quiz-panel" class="hidden">
+            <h3 id="question-text">Pergunta da Fase</h3>
+            <div id="options-container"></div>
+        </div>
+    </div>
+
+    <!-- TELA DE VITÓRIA -->
+    <div id="win-screen" class="screen">
+        <h1>🎉 Missão Cumprida!</h1>
+        <p>Parabéns! Você chegou com sucesso ao centro da Terra e aprendeu tudo sobre as camadas do nosso planeta!</p>
+        <button onclick="restartGame()">Jogar Novamente</button>
+    </div>
+</div>
